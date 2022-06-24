@@ -10,6 +10,8 @@ The order of operations (also called precedence) of Python math operators is sim
 //, and % operators are evaluated next, from left to right; and the + and - operators are evaluated last (also from left to right). You can use parentheses
 to override the usual precedence if you need to.
 
+
+
 Data Types:
 
 Integers: -2, -1, 0, 1, 2
@@ -62,9 +64,34 @@ Python gives an error because the + operator can only be used to add two integer
 because this is ungrammatical in Python.
 
 The str(), int(), and float() Functions
-If you want to concatenate an integer such as 29 with a string to pass to print(), you’ll need to get the value '29', which is the string form of 29. The str() function can be passed an integer value and will evaluate to a string value version of the integer, as follows:
+If you want to concentrate an integer such as 29 with a string to pass to print(), you’ll need to get the value '29', which is the string form of 29. 
+The str() function can be passed an integer value and will evaluate to a string value version of the integer, as follows:
 
 >>> str(29)
 '29'
 >>> print('I am ' + str(29) + ' years old.')
 I am 29 years old.
+
+The myAge variable contains the value returned from input(). Because the input() function always returns a string (even if the user typed in a number), 
+you can use the int(myAge) code to return an integer value of the string in myAge. This integer value is then added to 1 in the expression int(myAge) + 1.
+
+The result of this addition is passed to the str() function: str(int(myAge) + 1). The string value returned is then concatenated with the strings 'You 
+will be ' and ' in a year.' to evaluate to one large string value. This large string is finally passed to print() to be displayed on the screen.
+
+Let’s say the user enters the string '4' for myAge. The string '4' is converted to an integer, so you can add one to it. The result is 5. The str() 
+function converts the result back to a string, so you can concatenate it with the second string, 'in a year.', to create the final message.
+
+# This program says hello and asks for my name.
+print('Hello, world!')
+# ask for their name
+print('What is your name?')
+myName = input()
+print('It is good to meet you, ' + myName)
+print('The length of your name is:')
+print(len(myName))
+# ask for their age
+print('What is your age?')
+myAge = input()
+print('You will be ' + str(int(myAge) + 1) + ' in a year.')
+
+
