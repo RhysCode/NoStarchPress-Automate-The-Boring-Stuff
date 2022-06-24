@@ -1,0 +1,70 @@
+This book is made for people to write throwaway code, so there's not much time spent on elegance. Veteran programmers may point out ways the code in this
+book is mostly concerned with getting programs to work with the least amount of effort on your part.
+
+1. Python Basics
+
+In Python, 2 + 2 is called an expression, which is the most basic kind of programming instruction in the language. Expressions consist of values (such as 
+2) and operators (such as +), and they can always evaluate (that is, reduce) down to a single value.
+
+The order of operations (also called precedence) of Python math operators is similar to that of mathematics. The ** operator is evaluated first; the *, /,
+//, and % operators are evaluated next, from left to right; and the + and - operators are evaluated last (also from left to right). You can use parentheses
+to override the usual precedence if you need to.
+
+Data Types:
+
+Integers: -2, -1, 0, 1, 2
+Floating Point Numbers: -1.25, -1.0, -0.75, 0-50, -0.25, 0.0
+Strings: 'Hi', 'Hello', 'Bonjour'
+
+You can even have a string with no characters in it, '', called a blank string or an empty string. 
+
+Storing Values in Variables:
+
+A variable is like a box in the computer’s memory where you can store a single value. If you want to use the result of an evaluated expression later in 
+your program, you can save it inside a variable.
+
+You’ll store values in variables with an assignment statement. An assignment statement consists of a variable name, an equal sign (called the assignment 
+operator), and the value to be stored. If you enter the assignment statement spam = 42, then a variable named spam will have the integer value 42 stored 
+in it.
+Think of a variable as a labeled box that a value is placed in.
+
+When a variable is assigned a new value, the old value is forgotten. This is called overwriting the variable.
+
+A good variable name describes the data it contains. Imagine that you moved to a new house and labeled all of your moving boxes as Stuff. You’d never 
+find anything! But in your programs, a descriptive name will help make your code more readable.
+
+You can name a variable anything as long as it obeys the following three rules:
+- It can be only one word with no spaces.
+- It can use only letters, numbers, and the underscore (_) character.
+- It can’t begin with a number.
+
+The len() Function
+You can pass the len() function a string value (or a variable containing a string), and the function evaluates to the integer value of the number of 
+characters in that string.
+
+e.g.
+>>> len('hello')
+5
+>>> len('My very energetic monster just scarfed nachos.')
+46
+>>> len('')
+
+Just like those examples, len(myName) evaluates to an integer. It is then passed to print() to be displayed on the screen. The print() function allows you 
+to pass it either integer values or string values, but notice the error that shows up when you type the following into the interactive shell:
+
+ >>> print('I am ' + 29 + ' years old.')
+Traceback (most recent call last):
+  File "<pyshell#6>", line 1, in <module>
+    print('I am ' + 29 + ' years old.')
+TypeError: can only concatenate str (not "int") to str
+
+Python gives an error because the + operator can only be used to add two integers together or concatenate two strings. You can’t add an integer to a string,
+because this is ungrammatical in Python.
+
+The str(), int(), and float() Functions
+If you want to concatenate an integer such as 29 with a string to pass to print(), you’ll need to get the value '29', which is the string form of 29. The str() function can be passed an integer value and will evaluate to a string value version of the integer, as follows:
+
+>>> str(29)
+'29'
+>>> print('I am ' + str(29) + ' years old.')
+I am 29 years old.
