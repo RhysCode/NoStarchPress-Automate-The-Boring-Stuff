@@ -10,8 +10,6 @@ The order of operations (also called precedence) of Python math operators is sim
 //, and % operators are evaluated next, from left to right; and the + and - operators are evaluated last (also from left to right). You can use parentheses
 to override the usual precedence if you need to.
 
-
-
 Data Types:
 
 Integers: -2, -1, 0, 1, 2
